@@ -1238,9 +1238,9 @@ ul {
 /* Management & Governance Section */
 .mgmt-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
-  align-items: center;
+  align-items: stretch;
 }
 
 .mgmt-card {
@@ -1249,6 +1249,13 @@ ul {
   padding: 40px;
   border: 1px solid #e1ece6;
   box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.mgmt-card .paragraph-block:last-child {
+  margin-bottom: 0;
 }
 
 .mgmt-features {
@@ -1297,6 +1304,9 @@ ul {
   color: #FFFFFF;
   border: 1px solid rgba(245, 135, 78, 0.3);
   box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .market-focus-card h4 {
@@ -1312,6 +1322,10 @@ ul {
   font-size: 0.95rem;
   line-height: 1.65;
   margin-bottom: 24px;
+}
+
+.market-focus-card p:last-child {
+  margin-bottom: 0;
 }
 
 .contract-terms-pills {
